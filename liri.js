@@ -56,9 +56,10 @@ function srch(){
             function(response){
                 for (i=0; i<response.data.length; i++){
                 var date = moment(response.data[i].datetime, "YYYY-MM-DD[T]HH:mm:ss").format("dddd, MMMM Do YYYY, h:mm A")
-                console.log(response.data[i].venue.name);
-                console.log(response.data[i].venue.city + ", " + response.data[0].venue.country);
-                console.log(date);
+                console.log("Venue: " + response.data[i].venue.name);
+                console.log("City: " + response.data[i].venue.city + ", " + response.data[0].venue.country);
+                console.log("date/Time: " + date);
+                console.log("\n")
                 }
             }
         )
